@@ -9,12 +9,14 @@ void initializers(void) {
     initUART();
     initializeTimer();
     initializeBoardLEDs();
+    PWMinit(1, 20);
     
     INTCONbits.MVEC = 1;
     __builtin_enable_interrupts();
 }
 
 char buffer[BUFFER_SIZE];
+int i;
 
 int main(void) {
     
@@ -29,6 +31,15 @@ int main(void) {
         
         flash();
         delay(1000, MILLI);
+        
+        for (i = -40; i <= 40; i++) {
+           servoSet(i);
+           delay(10, MILLI);
+        }
+        for (i = 40; i >= -40; i--) {
+            servoSet(i);
+            delay(10, MILLI);
+        }
         
     }
     
