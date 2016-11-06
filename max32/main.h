@@ -2,6 +2,9 @@
 #define _MAIN__H__
 
 #include <xc.h>
+#include <stdio.h>
+#include <string.h>
+
 #include "config.h"
 #include "PWM.h"
 #include "GPIO.h"
