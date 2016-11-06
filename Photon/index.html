@@ -1,0 +1,286 @@
+<!DOCTYPE>
+<html>
+<script type="text/javascript">
+
+    state = 0;
+    
+    function on() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/led?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "on");
+      xmlHttp.send(body);
+    }
+
+    function off() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/led?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "off");
+      xmlHttp.send(body);
+    }
+
+    function callback(text) {
+      document.getElementById("response").innerHTML = text;
+    }
+
+//******************************************************************************************
+//Movement functions
+
+function forward() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/move?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "forward");
+      xmlHttp.send(body);
+    }
+
+    function backward() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/move?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "backward");
+      xmlHttp.send(body);
+    }
+
+    function left() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/move?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "left");
+      xmlHttp.send(body);
+    }
+
+    function right() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/move?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "right");
+      xmlHttp.send(body);
+    }
+
+    function stop() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/move?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "stop");
+      xmlHttp.send(body);
+    }
+
+
+///////////////////////////////////////////////////////////////
+//end movement functions
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////
+// More complicated led functions
+/////////////////////////////////
+
+    function intensityUp() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/led?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "intensityUp");
+      xmlHttp.send(body);
+    }
+
+    function intensityDown() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/led?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "intensityDown");
+      xmlHttp.send(body);
+    }
+
+
+///Color functions 
+//**********************************//
+       function red() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/led?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "red");
+      xmlHttp.send(body);
+    }
+       function yellow() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/led?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "yellow");
+      xmlHttp.send(body);
+    }
+       function blue() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/led?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "blue");
+      xmlHttp.send(body);
+    }
+
+       function pattern() {
+
+      var xmlHttp = new XMLHttpRequest();
+      //xmlHttp.setRequestHeader("Content-Type", "text/json");
+      var body = new FormData();
+
+
+      xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+      }
+
+      
+        xmlHttp.open("POST", "https://api.particle.io/v1/devices/1f002b001247343432313031/led?access_token=8fd250968073c4c36124448061ec587ca1e20321", true); // true for asynchronous
+        body.append("args", "pattern");
+      xmlHttp.send(body);
+    }
+
+  </script>
+
+<title> Trike Bot </title>
+<style>
+body{
+	background-color: #E1E1E1;
+}
+</style>
+  <body>
+  <center>
+  
+ 
+  <button onclick="javascript:on()" background:url(lightsOn.png)><img src="LightsOn.png" height="120"/></button>
+  <button onclick="javascript:off()" background:url(lightsOn.png)><img src="lightsOff.png" height="120"/></button>
+<br><br>
+
+ <table style="float: center" align="center">
+  <tr>
+  	<td></td>
+    <td><button onclick="javascript:forward()"> <img src="up.png" height="100"/></button></td>
+  </tr>
+  <tr>
+    <td><button onclick="javascript:left()"><img src="left.png" height="100"/> </button></td>
+    <td><button onclick="javascript:stop()"><img src="stop.png" height="100"/> </button></td>
+    <td><button onclick="javascript:right()"> <img src="right.png" height="100"/></button></td>
+  </tr>
+  <tr>
+  <td></td>
+    <td><button onclick="javascript:backward()"><img src="down.png" height="100"/> </button></td>
+  </tr>
+</table>
+
+<br>
+<tr>
+<td><button onclick="javascript:intensityUp()" background:url(lightsOn.png)><img src="intensityUp.png" height="100"/></button></td>
+<td><button onclick="javascript:intensityDown()" background:url(lightsOn.png)><img src="intensityDown.png" height="100"/></button></td>
+</tr>
+<br>
+<button onclick="javascript:pattern()"> <img src="Pattern.png" height="120"/></button>
+
+</center>
+  </body>
